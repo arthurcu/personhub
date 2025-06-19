@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>何凯明 - 深度学习先驱与计算机视觉专家</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-gray-900">何凯明</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">简介</a>
+                    <a href="#timeline" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">经历</a>
+                    <a href="#research" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">科研贡献</a>
+                    <a href="#awards" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">获奖荣誉</a>
+                    <a href="#stories" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">精彩故事</a>
+                    <a href="#impact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">领域影响</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t hidden">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#hero" class="block py-2 text-gray-700 hover:text-blue-600">简介</a>
+                <a href="#timeline" class="block py-2 text-gray-700 hover:text-blue-600">经历</a>
+                <a href="#research" class="block py-2 text-gray-700 hover:text-blue-600">科研贡献</a>
+                <a href="#awards" class="block py-2 text-gray-700 hover:text-blue-600">获奖荣誉</a>
+                <a href="#stories" class="block py-2 text-gray-700 hover:text-blue-600">精彩故事</a>
+                <a href="#impact" class="block py-2 text-gray-700 hover:text-blue-600">领域影响</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="hero-bg absolute inset-0"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center space-y-8 fade-in">
+                <div class="relative inline-block">
+                    <img src="images/kaiming_he_portrait.jpg" alt="何凯明" 
+                         class="w-48 h-48 rounded-full mx-auto shadow-2xl border-4 border-white object-cover animate-float">
+                    <div class="absolute -bottom-2 -right-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full p-3">
+                        <i class="fas fa-brain text-white text-xl"></i>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent animate-gradient">
+                        何凯明
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+                        深度学习先驱 · 计算机视觉专家 · MIT副教授
+                    </p>
+                    <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                        ResNet架构的创造者，推动深度学习革命的关键人物，<br>
+                        从暗通道去雾到Mask R-CNN，重新定义计算机视觉的边界
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <div class="stat-card bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                        <div class="text-3xl font-bold text-blue-600">71</div>
+                        <div class="text-sm text-gray-600">H-index</div>
+                    </div>
+                    <div class="stat-card bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                        <div class="text-3xl font-bold text-purple-600">71万+</div>
+                        <div class="text-sm text-gray-600">总引用数</div>
+                    </div>
+                    <div class="stat-card bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
+                        <div class="text-3xl font-bold text-indigo-600">5+</div>
+                        <div class="text-sm text-gray-600">顶级奖项</div>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <a href="#timeline" class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <span>探索他的传奇之路</span>
+                        <i class="fas fa-arrow-down ml-2 animate-bounce"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl opacity-70"></i>
+        </div>
+    </section>
+
+    <!-- 人生经历时间线 -->
+    <section id="timeline" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">人生经历</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 mt-6">从高考状元到深度学习革命者的成长历程</p>
+            </div>
+            
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-full timeline-line"></div>
+                
+                <div class="space-y-12">
+                    <!-- 1984年 -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="timeline-card bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">1984年</h3>
+                                <p class="text-gray-700">出生于中国广东省广州市</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <!-- 2003年 -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="timeline-card bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2003年</h3>
+                                <p class="text-gray-700">全国物理竞赛一等奖保送清华，同时以满分900分成为广东省高考状元</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2007年 -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="timeline-card bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2007年</h3>
+                                <p class="text-gray-700">获得清华大学基础科学班学士学位</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <!-- 2011年 -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="timeline-card bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2011年</h3>
+                                <p class="text-gray-700">获得香港中文大学博士学位，师从汤晓鸥教授，加入微软亚洲研究院</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2016年 -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="timeline-card bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2016年</h3>
+                                <p class="text-gray-700">加入Facebook AI Research (FAIR)，开启深度学习新篇章</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+
+                    <!-- 2024年 -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="timeline-card bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg shadow-lg">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">2024年至今</h3>
+                                <p class="text-gray-700">MIT电子工程与计算机科学系副教授，专注AI for Science研究</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要科研贡献 -->
+    <section id="research" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">科研贡献</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 mt-6">革命性的算法创新，重新定义计算机视觉与深度学习</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 暗通道先验 -->
+                <div class="research-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">暗通道先验去雾</h3>
+                            <p class="text-sm opacity-90">2009年</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <i class="fas fa-cloud text-white text-3xl opacity-70"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            首次提出暗通道先验理论，革命性地解决了单幅图像去雾问题，成为计算机视觉领域的里程碑成果。
+                        </p>
+                        <div class="flex items-center text-blue-600">
+                            <i class="fas fa-award mr-2"></i>
+                            <span class="text-sm font-semibold">CVPR 2009 最佳论文奖</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ResNet -->
+                <div class="research-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 relative overflow-hidden">
+                        <img src="images/resnet_architecture.png" alt="ResNet架构" class="w-full h-full object-cover opacity-80">
+                        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">深度残差网络 ResNet</h3>
+                            <p class="text-sm opacity-90">2015年</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <i class="fas fa-network-wired text-white text-3xl opacity-70"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            提出残差学习框架，成功训练超过1000层的深度神经网络，彻底改变了深度学习的发展轨迹。
+                        </p>
+                        <div class="flex items-center text-purple-600">
+                            <i class="fas fa-trophy mr-2"></i>
+                            <span class="text-sm font-semibold">ImageNet 2015 冠军</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mask R-CNN -->
+                <div class="research-card bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Mask R-CNN</h3>
+                            <p class="text-sm opacity-90">2017年</p>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <i class="fas fa-eye text-white text-3xl opacity-70"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            实例分割领域的突破性框架，同时完成目标检测、实例分割和关键点检测，树立了新的标杆。
+                        </p>
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-medal mr-2"></i>
+                            <span class="text-sm font-semibold">ICCV 2017 Marr Prize</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <div class="inline-flex items-center bg-white rounded-full px-8 py-4 shadow-lg">
+                    <i class="fas fa-chart-line text-blue-600 mr-3"></i>
+                    <span class="text-lg font-semibold text-gray-900">Google Scholar H-index: 71 | 总引用数: 711,942</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 获奖与荣誉 -->
+    <section id="awards" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">获奖荣誉</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 mt-6">学术界最高荣誉的见证</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="award-card bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-trophy text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">CVPR 最佳论文奖</h3>
+                    <p class="text-gray-600 mb-2">2009年 & 2016年</p>
+                    <p class="text-sm text-gray-500">计算机视觉顶级会议的最高荣誉</p>
+                </div>
+
+                <div class="award-card bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-medal text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">ICCV Marr Prize</h3>
+                    <p class="text-gray-600 mb-2">2017年</p>
+                    <p class="text-sm text-gray-500">计算机视觉领域的最高奖项</p>
+                </div>
+
+                <div class="award-card bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">PAMI青年研究者奖</h3>
+                    <p class="text-gray-600 mb-2">2018年</p>
+                    <p class="text-sm text-gray-500">模式分析与机器智能期刊最高荣誉</p>
+                </div>
+
+                <div class="award-card bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-all duration-300 md:col-span-2 lg:col-span-3">
+                    <div class="w-20 h-20 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-crown text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">未来科学大奖</h3>
+                    <p class="text-gray-600 mb-2">2023年 - 数学与计算机科学奖</p>
+                    <p class="text-gray-500">中国科学界的诺贝尔奖，表彰其在深度学习领域的杰出贡献</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 有趣事迹和故事 -->
+    <section id="stories" class="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">精彩故事</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 mt-6">天才背后的有趣人生片段</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="story-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-graduation-cap text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">高考状元的选择</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        2003年，何凯明在获得全国物理竞赛一等奖保送清华后，仍然参加了高考，并以满分900分的成绩成为当年的广东省高考状元。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        然而他最终选择了清华大学的基础科学班，这个选择体现了他对基础研究的浓厚兴趣，也为他后来的科研之路奠定了坚实基础。
+                    </p>
+                </div>
+
+                <div class="story-card bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-quote-left text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">95%的沮丧时光</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        在一次公开分享中，何凯明坦言："95%的科研时间是沮丧的"。这句广为流传的话，不仅道出了科研工作的真实写照，也展现了他的诚实与谦逊。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        这句话激励了无数青年研究者，让他们明白科研路上的挫折是常态，重要的是保持耐心和毅力，在5%的突破时刻中找到前进的动力。
+                    </p>
+                </div>
+
+                <div class="story-card bg-white p-8 rounded-xl shadow-lg lg:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-lightbulb text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">大道至简的研究哲学</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                何凯明的研究以"大道至简"著称。无论是ResNet的残差连接，还是后来的MAE（Masked Autoencoders），其核心思想都非常简洁优雅，但却极为有效。
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                他的研究方法深刻地影响了整个领域的研究范式，证明了有时候最简单的想法往往能带来最革命性的突破。
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="text-center p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
+                                <i class="fas fa-infinity text-4xl text-purple-600 mb-4"></i>
+                                <p class="text-lg font-semibold text-gray-900">"简单即美"</p>
+                                <p class="text-gray-600">最深刻的洞察往往来自最简单的思考</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 对领域的影响 -->
+    <section id="impact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">领域影响</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+                <p class="text-xl text-gray-600 mt-6">重新定义计算机视觉与深度学习的未来</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-gray-900">革新深度学习范式</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        何凯明提出的深度残差网络（ResNet）从根本上解决了深度神经网络难以训练的问题，使得构建数百甚至上千层的网络成为可能。
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        这一突破直接推动了深度学习在图像识别、目标检测、语音识别等众多领域的广泛应用，ResNet至今仍是许多先进模型的标准骨干架构。
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <span class="text-gray-700">解决梯度消失问题</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                        <span class="text-gray-700">开启超深度网络时代</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <span class="text-gray-700">成为标准架构基础</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="images/deep_learning_viz.awebp" alt="深度学习可视化" 
+                         class="w-full rounded-xl shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="impact-card text-center p-8 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-eye text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">实例分割标杆</h4>
+                    <p class="text-gray-700">Mask R-CNN为实例分割任务树立了新的标杆，对自动驾驶、医疗影像分析等应用产生了巨大影响</p>
+                </div>
+
+                <div class="impact-card text-center p-8 bg-gradient-to-br from-green-50 to-teal-50 rounded-xl">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">推动无监督学习</h4>
+                    <p class="text-gray-700">MAE等工作极大提升了模型从未标注数据中学习有效表征的能力，为利用海量数据开辟新道路</p>
+                </div>
+
+                <div class="impact-card text-center p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">奠定基础方法</h4>
+                    <p class="text-gray-700">何氏初始化等基础方法已成为训练深度神经网络的标准实践，被广泛采用</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white text-center">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <img src="images/mit_building.jpg" alt="MIT建筑" 
+                             class="w-full rounded-lg shadow-lg">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">未来方向：AI for Science</h3>
+                        <p class="text-xl leading-relaxed">
+                            在加入MIT后，何凯明明确表示未来的研究重点将是"AI for Science"，致力于将人工智能技术应用于解决跨学科的科学问题，展现了他希望通过AI推动更广泛科学进步的愿景。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">何凯明</h3>
+                <p class="text-gray-400 mb-6">深度学习先驱 · 计算机视觉专家 · MIT副教授</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-google text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-500">&copy; 2024 MiniMax Agent. 致敬伟大的科学家何凯明。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-110 opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+
+<style>
+#minimax-floating-ball {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 12px;
+  background: #222222;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: #F8F8F8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#minimax-floating-ball:hover {
+  transform: translateY(-2px);
+  background: #383838;
+}
+
+.minimax-ball-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.minimax-logo-wave {
+  width: 26px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='22' viewBox='0 0 26 22' fill='none'%3E%3Cg clip-path='url(%23clip0_3442_102412)'%3E%3Cpath d='M12.8405 14.6775C12.8405 14.9897 13.0932 15.2424 13.4055 15.2424C13.7178 15.2424 13.9705 14.9897 13.9705 14.6775V2.98254C13.9705 1.88957 13.0809 1 11.9879 1C10.895 1 10.0054 1.88957 10.0054 2.98254V11.566V17.1068C10.0054 17.5773 9.62327 17.9594 9.1528 17.9594C8.68233 17.9594 8.30021 17.5773 8.30021 17.1068V8.04469C8.30021 6.95172 7.41063 6.06215 6.31767 6.06215C5.22471 6.06215 4.33513 6.95172 4.33513 8.04469V11.8855C4.33513 12.3559 3.953 12.7381 3.48254 12.7381C3.01207 12.7381 2.62994 12.3559 2.62994 11.8855V10.4936C2.62994 10.1813 2.37725 9.92861 2.06497 9.92861C1.7527 9.92861 1.5 10.1813 1.5 10.4936V11.8855C1.5 12.9784 2.38957 13.868 3.48254 13.868C4.5755 13.868 5.46508 12.9784 5.46508 11.8855V8.04469C5.46508 7.57422 5.8472 7.19209 6.31767 7.19209C6.78814 7.19209 7.17026 7.57422 7.17026 8.04469V17.1068C7.17026 18.1998 8.05984 19.0894 9.1528 19.0894C10.2458 19.0894 11.1353 18.1998 11.1353 17.1068V2.98254C11.1353 2.51207 11.5175 2.12994 11.9879 2.12994C12.4584 2.12994 12.8405 2.51207 12.8405 2.98254V14.6775Z' fill='%23F8F8F8'/%3E%3Cpath d='M23.3278 6.06215C22.2348 6.06215 21.3452 6.95172 21.3452 8.04469V15.6143C21.3452 16.0847 20.9631 16.4669 20.4926 16.4669C20.0222 16.4669 19.6401 16.0847 19.6401 15.6143V2.98254C19.6401 1.88957 18.7505 1 17.6575 1C16.5645 1 15.675 1.88957 15.675 2.98254V19.0175C15.675 19.4879 15.2928 19.8701 14.8224 19.8701C14.3519 19.8701 13.9698 19.4879 13.9698 19.0175V17.0329C13.9698 16.7206 13.7171 16.4679 13.4048 16.4679C13.0925 16.4679 12.8398 16.7206 12.8398 17.0329V19.0175C12.8398 20.1104 13.7294 21 14.8224 21C15.9153 21 16.8049 20.1104 16.8049 19.0175V2.98254C16.8049 2.51207 17.187 2.12994 17.6575 2.12994C18.128 2.12994 18.5101 2.51207 18.5101 2.98254V15.6143C18.5101 16.7072 19.3997 17.5968 20.4926 17.5968C21.5856 17.5968 22.4752 16.7072 22.4752 15.6143V8.04469C22.4752 7.57422 22.8573 7.19209 23.3278 7.19209C23.7982 7.19209 24.1804 7.57422 24.1804 8.04469V14.6775C24.1804 14.9897 24.4331 15.2424 24.7453 15.2424C25.0576 15.2424 25.3103 14.9897 25.3103 14.6775V8.04469C25.3103 6.95172 24.4207 6.06215 23.3278 6.06215Z' fill='%23F8F8F8'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3442_102412'%3E%3Crect width='25' height='22' fill='white' transform='translate(0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.minimax-ball-text {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.minimax-close-icon {
+  margin-left: 8px;
+  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.minimax-close-icon:hover {
+  opacity: 1;
+}
+</style>
+<div id="minimax-floating-ball">
+  <div class="minimax-ball-content">
+    <div class="minimax-logo-wave"></div>
+    <span class="minimax-ball-text">Created by MiniMax Agent</span>
+  </div>
+  <div class="minimax-close-icon">×</div>
+</div>
+<script>
+// Initialize floating ball functionality
+function initFloatingBall() {
+  const ball = document.getElementById('minimax-floating-ball');
+  if (!ball) return;
+
+  // Initial animation
+  ball.style.opacity = '0';
+  ball.style.transform = 'translateY(20px)';
+
+  setTimeout(() => {
+    ball.style.opacity = '1';
+    ball.style.transform = 'translateY(0)';
+  }, 500);
+
+  // Handle logo click
+  const ballContent = ball.querySelector('.minimax-ball-content');
+  ballContent.addEventListener('click', function (e) {
+    e.stopPropagation();
+    window.open('https://agent.minimax.io/agent', '_blank');
+    ball.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      ball.style.transform = 'scale(1)';
+    }, 100);
+  });
+
+  // Handle close button click
+  const closeIcon = ball.querySelector('.minimax-close-icon');
+  closeIcon.addEventListener('click', function (e) {
+    e.stopPropagation();
+    ball.style.opacity = '0';
+    ball.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+      ball.style.display = 'none';
+    }, 300);
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initFloatingBall); 
+</script>
+
+</body>
+</html>
